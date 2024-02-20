@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <header class="pege-header">
+  <header class="pege-header" data-test="header">
     <a class="logo" href="">
       <img class="logo" src="" alt="logo курорта Седона">
     </a>
@@ -40,19 +40,20 @@
       </ul>
     </nav>
   </header>
-  <main class="main-index">
-    <h1 class="visually-hidden">курорт Седона</h1>
-    <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
-    <img class="welcom-logo" src="" alt="WELCOM">
-    <img class="to_the_gorgeous-logo" src="" alt="to the gorgeous">
-    <img class="logo" src="" alt="SEDONA Because the Grand Canyon sucks!">
-    <h3 class="visually-hidden">Преимущества</h3>
-    <h3 class="title">Седона — небольшой городок в Аризоне,
-      заслуживающий большего!</h3>
-    <p class="title-description">Рассмотрим причины, по которым Седона круче,
-      чем Гранд-Каньон!</p>
-
-    <section class="advantages">
+  <main class="main" data-test="main" data-test="hero">
+    <section class="hero">
+      <h1 class="visually-hidden">курорт Седона</h1>
+      <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
+      <img class="hero-welcom-logo" src="" alt="WELCOM">
+      <img class="hero-to_the_gorgeous-logo" src="" alt="to the gorgeous">
+      <img class="hero-logo" src="" alt="SEDONA Because the Grand Canyon sucks!">
+      <h3 class="visually-hidden">Преимущества</h3>
+      <h3 class="hero-title">Седона — небольшой городок в Аризоне,
+        заслуживающий большего!</h3>
+      <p class="hero-title-description">Рассмотрим причины, по которым Седона круче,
+        чем Гранд-Каньон!</p>
+    </section>
+    <section class="advantages" data-test="advantages">
       <ul class="advantages-list">
         <li class="advantages-item">
           <h3 class="advantages-title">Настоящий городок</h3>
@@ -118,12 +119,9 @@
       <h2 class="search-catalog">Заинтересовались?</h2>
       <p class="search-catalog-description">Укажите предполагаемые даты поездки,
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <a class="button-lightbrown" href="#">Поиск гостиницы в Седоне</a>
+      <a class="button-lightbrown" href="catalog.html">Поиск гостиницы в Седоне</a>
 
     </section>
-
-  </main>
-  <footer class="page-footer">
     <section class="subscribe">
       <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
       <p class="subscribe-description">Только полезная информация и никакого
@@ -135,6 +133,9 @@
         <button class="button" type="submit">Подписаться</button>
       </form>
     </section>
+  </main>
+  <footer class="page-footer" data-test="search">
+
     <section class="footer-contacts">
       <ul class="social-list">
         <li class="social-item">
