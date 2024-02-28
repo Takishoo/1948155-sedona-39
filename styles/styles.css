@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format(woff2);
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: black;
+  background-color: rgb(54, 133, 74); /*временно, заменить на белый*/
+  text-align: center;
+}
+
+.page-header {
+  color: black;
+  background-color: white;
+}
+
+.navigation-link {
+  line-height: 26px;
+  font-weight: 700;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+
+.hero {
+  color: black;
+  background-color: white;
+  background-image: url(../images/background-welcom-to-sedona.jpg);
+  background-size: 100% auto; /*масштабирование картинки/фона*/
+  background-repeat: no-repeat;
+}
+
+.hero-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-title-description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+/*uppercase title group*/
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/*uppercase description group*/
+.advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.subscribe-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+/*only white title*/
+.white-title {
+  color: white;
+}
+/*only white description*/
+.white-description {
+  color: white;
+}
+
+.subscribe-title-description {
+  font-size: 22px;
+  line-height: 26px;
+}
+/*all brown button*/
+.button-lightbrown  {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: white;
+  background-color: #756157;
+  text-decoration: none; /*без подчеркивания*/
+  text-transform: uppercase; /*заглавные*/
+}
+.button-lightblue {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: white;
+  background-color: #82B3D3;
+  text-transform: uppercase;
+}
+.button-lightgreen {
+  background-color: #7DB54F;
+}
+
+.subscribe {
+  color: white;
+  background-image: url(../images/background-welcom-to-sedona.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.subscribe-title {
+  text-transform: uppercase;
+}
+.subscribe-catalog {
+  color: black;
+  background-image: none;
+}
+
+.contact-phone {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  font-style: normal; /*отменяет применения стилей к тексту (наклон и тд)*/
+}
+
+/*catalog */
+.inner-header {
+  color: white;
+  background-image: url(../images/catalog/background-filter.jpg);
+  background-size: 100% auto; /*масштабирование картинки/фона*/
+  background-repeat: no-repeat;
+
+}
+.inner-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+.select-control {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+
+}
+.hotels-found {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.hotel-card-link {
+  text-decoration: none;
+}
+.hotel-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: black;
+}
+.hotel-card-type {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+.hotel-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  text-align: right;
+}
+.rating-value {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  text-transform: uppercase;
+}
+.pagination-link {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: white;
+}
+.pagination-current {
+  color: black;
+}
+.pagination-item p {
+  font-size: 22px;
+  line-height: 26px;
+}
