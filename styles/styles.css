@@ -8,41 +8,113 @@
 
 @font-face {
   font-family: "PT Sans";
-  font-style: bold;
   font-weight: 700;
   src: url("../fonts/ptsans-700.woff2") format(woff2);
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /*липкий footer*/
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  color: black;
-  background-color: rgb(54, 133, 74); /*временно, заменить на белый*/
+  font-style: normal;
+  /*отменяет применения стилей к тексту (наклон и тд)*/
+  color: #000000;
+  background-color: #F2F2F2;
   text-align: center;
+  width: 1200px;
 }
 
 .page-header {
-  color: black;
-  background-color: white;
+  background-color: #ffffff;
+  display: flex;
+  height: 64px;
+
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1060px;
+  background-color: #ffffff;
+
+}
+
+.navigation-page {
+  width: 600px;
+  height: 64px;
+}
+
+.navigation-user {
+  display: flex;
+  justify-content: flex-end;
+  width: 300px;
+  height: 64px;
+}
+
+.logo {
+  display: block;
+
+}
+
+.navigation-conteiner {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation-link {
   line-height: 26px;
   font-weight: 700;
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #ffffff;
   text-decoration: none;
 }
 
+.number-12 {
+  color: #ffffff;
+  background-color: #ffffff;
+}
+
+.main-container {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+  width: 1200px;
+  height: 70px;
+}
+
 .hero {
-  color: black;
-  background-color: white;
-  background-image: url(../images/background-welcom-to-sedona.jpg);
-  background-size: 100% auto; /*масштабирование картинки/фона*/
+  height: 485px;
+  color: #000000;
+  background-color: #ffffff;
+  background-image: url(../images/welcom-to-sedona-background.jpg);
+  background-size: 100% auto, cover;
+  /*масштабирование картинки/фона*/
   background-repeat: no-repeat;
+
+
 }
 
 .hero-title {
@@ -50,156 +122,443 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  background-color: #ffffff;
 }
 
-.hero-title-description {
+.hero-description {
   font-size: 22px;
   line-height: 26px;
+  background-color: #ffffff;
 }
 
-/*uppercase title group*/
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+
+}
+
+.advantages-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  height: 385px;
+}
+
 .advantages-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+  background: transparent;
+  /*прозраный фон за текстом*/
 }
-/*uppercase description group*/
+
+.picture {
+  width: 800px;
+  height: auto;
+}
+
 .advantages-description {
   font-size: 18px;
   line-height: 21px;
+  background: transparent;
+}
+
+/*only  #ffffff title*/
+.nocolor-title {
+  color: #ffffff;
+}
+
+/*only  #ffffff description*/
+.nocolor-description {
+  color: #ffffff;
+}
+
+.square-1-5 {
+  background-color: #82B3D3;
+
+}
+
+.square-2-3-4 {
+  background-color: #83B3D31F;
+}
+
+.subscribe-title-description {
+  font-size: 22px;
+  line-height: 26px;
+  background-color: #ffffff;
+}
+
+/*all button*/
+.button {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  /*без подчеркивания*/
+  text-transform: uppercase;
+  /*заглавные*/
+}
+
+.button-dark {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #756157;
+}
+
+.button-search-catalog {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #756157;
+}
+
+.button-light {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #82B3D3;
+}
+
+.button-subscribe {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82B3D3;
+}
+
+.button-reset {
+  background-color: transparent;
+  /*без фона*/
+}
+
+.button-selected {
+  font-family: inherit;
+  background-color: #7DB54F;
+}
+
+.button-cardview {
+  text-decoration: none;
+  /*без подчеркивания*/
+  background-color: transparent;
+}
+
+.input-background {
+  background-color: #F2F2F2;
+}
+
+.select-control {
+  font-size: 18px;
+  line-height: 21px;
+  font-family: inherit;
+  background-color: #ffffff;
+}
+
+.subscribe {
+  color: #ffffff;
+  background-color: #ffffff;
+  background-image: url(../images/subscribe-background.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .subscribe-title {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-}
-/*only white title*/
-.white-title {
-  color: white;
-}
-/*only white description*/
-.white-description {
-  color: white;
-}
-
-.subscribe-title-description {
-  font-size: 22px;
-  line-height: 26px;
-}
-/*all brown button*/
-.button-lightbrown  {
-  font-size: 20px;
-  line-height: 36px;
-  font-weight: 700;
-  color: white;
-  background-color: #756157;
-  text-decoration: none; /*без подчеркивания*/
-  text-transform: uppercase; /*заглавные*/
-}
-.button-lightblue {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  color: white;
-  background-color: #82B3D3;
   text-transform: uppercase;
 }
-.button-lightgreen {
-  background-color: #7DB54F;
-}
 
-.subscribe {
-  color: white;
-  background-image: url(../images/background-welcom-to-sedona.jpg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-}
-.subscribe-title {
-  text-transform: uppercase;
-}
 .subscribe-catalog {
-  color: black;
+  color: #000000;
   background-image: none;
+}
+
+.input-field {
+  background-color: #000000;
+}
+
+/*FOOTER*/
+
+.footer-contacts {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 1200px;
+  height: 120px;
+  background-color: #ffffff;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+
+}
+
+.social-item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 142px;
+  height: 40px;
 }
 
 .contact-phone {
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
-  color: black;
-  background-color: white;
+  color: #000000;
   text-decoration: none;
-  font-style: normal; /*отменяет применения стилей к тексту (наклон и тд)*/
+  font-style: normal;
+  width: 720px;
+  height: 50px;
 }
 
-/*catalog */
-.inner-header {
-  color: white;
+.contact-email {
+  display: flex;
+  margin-right: auto;
+  width: 115px;
+  height: 33px;
+  text-decoration: none;
+  font-style: normal;
+}
+
+
+/*CATALOG */
+
+.main-inner {
+background-color:  #ffffff; - вернуть чуть позже общий белый фон
+}
+
+.filter-content {
+  color: #ffffff;
   background-image: url(../images/catalog/background-filter.jpg);
-  background-size: 100% auto; /*масштабирование картинки/фона*/
+  background-size: 100% auto;
+  /*масштабирование картинки/фона*/
   background-repeat: no-repeat;
-
+  background-color: #ffffff;
 }
+.filter-conteiner {
+  width: 1060px;
+  height: 412px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.inner-header {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
 .inner-header a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-}
 
+}
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
+  margin: 0;
+  margin-top: 35px;
+
+}
+.breadcrumbs {
+  margin: 0;
+  margin-top: 8px;
+  padding: 0;
+}
+
+.filter {
+  height: 160px;
+}
+.filter-form {
+  display: flex;
+  justify-content: space-between;
+  height: 160px;
+  margin-bottom: 70px;
+}
+.filter-group {
+  text-align: left;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.filter-price {
+  display: flex;
+  width: 290px;
+  margin-left:  140px;
+}
+.input-background {
+  width: 145px;
+  min-height: 48px;
+}
+
+.filter-group-list {
+  margin: 0;
+  margin-top: 32px;
+  padding: 0;
+  height: 100px;
+}
+
+.filter-group-item {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  margin-top: 16px;
+
+}
+
+.button-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 190px;
+
+}
+
+.catalog-container {
+  background-color: #ffffff;
+}
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.button-cardview {
+  width: 48px;
+  height: 48px;
 }
 .select-control {
+  width: 290px;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-
+  background-color: #ffffff;
+  margin-left: 140px;
 }
+
+.cardview-container {
+
+  width: 160px;
+  height: 50px;
+  margin-left: 70px;
+}
+
 .hotels-found {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  background-color: #ffffff;
+  margin: 0;
 }
-.hotel-card-link {
+.hotel-card {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  grid-auto-rows: 438px;
+  gap: 20px;
+  list-style-type: none;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0;
+
+}
+.hotel-card-item {
+  padding: 20px;
+
+}
+.hotel-card-content {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 16px;
+  justify-content: space-between;
+  text-align: left;
+}
+.hotel-card-content p {
+  margin: 0;
+}
+.hotel-card-content a {
   text-decoration: none;
 }
+
+.hotel-card-link {
+  text-decoration: none;
+  background-color: #ffffff;
+}
+
 .hotel-title {
+  grid-column: 1 / 3 ;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
-  color: black;
+  color: #000000;
+  background-color: #ffffff;
 }
+
 .hotel-card-type {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  background-color: #ffffff;
 }
+
 .hotel-card-price {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   text-align: right;
+  background-color: #ffffff;
+}
+.hotel-card-photo {
+  width: 300px;
+  height: 212px;
+
 }
 .rating-value {
   font-size: 16px;
   line-height: 20px;
   color: #333333;
+  text-align: center;
   text-transform: uppercase;
+  background-color: #ffffff;
+}
+
+
+/*PAGINATION*/
+.pagination {
+  display: flex;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .pagination-link {
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
-  color: white;
+  color: #ffffff;
+  background-color: #ffffff;
 }
+
 .pagination-current {
-  color: black;
+  color: #000000;
+  background-color: #ffffff;
 }
+
 .pagination-item p {
   font-size: 22px;
   line-height: 26px;
+  background-color: #ffffff;
 }
